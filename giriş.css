@@ -1,0 +1,85 @@
+a {
+  text-decoration: none;
+}
+body {
+  background-color: black;
+}
+.text {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 200px;
+  font-family: fantasy;
+  color: white;
+  letter-spacing: 15px;
+}
+.btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+a {
+  font-size: 25px;
+  font-family: fantasy;
+  letter-spacing: 5px;
+}
+.line {
+  position: relative;
+  top: 50%;
+  width: 1100px;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.anim-typewriter {
+  animation: typewriter 4s steps(50) 0.5s 1 normal both,
+    blinkTextCursor 550ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 900px;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.play {
+  position: relative;
+  top: 50%;
+  width: 16em;
+  margin: 0 auto;
+  font-size: 35px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+.anim-typewriterplay {
+  animation: typewriterplay 4s steps(40) 0.5s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+.btn p {
+  animation-name: color;
+}
+
+@keyframes color {
+  to {
+    font-size: 50px;
+    color: orange;
+  }
+}
