@@ -7,7 +7,6 @@ body {
   background: rgb(243, 170, 86);
 }
 #contain {
-  max-width: 1100px;
   margin: 50px;
   height: auto;
 }
