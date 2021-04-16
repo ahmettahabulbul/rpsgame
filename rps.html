@@ -12,16 +12,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="main.css" />
-    <script src="main.js"></script>
   </head>
   <body>
-    <header><h1>WELCOME THE GAME</h1></header>
+    <header><h1>THE RPS GAME</h1></header>
     <section>
       <div id="contain">
-        <div id="selections">
-          <i id="i" class="far fa-hand-rock"></i>
-          <i id="i" class="far fa-hand-paper"></i>
-          <i id="i" class="far fa-hand-scissors"></i>
+        <div id="selection">
+          <img src="img/rock.png" id="r" />
+          <img src="img/hand.png" id="p" />
+          <img src="img/scissors.png" id="s" />
         </div>
       </div>
     </section>
@@ -29,8 +28,28 @@
       <div class="score">
         <div id="user">user</div>
         <div id="computer">computer</div>
-        <span id="userscore">0 </span>:<span id="computer score">0</span>
+        <span class="userscore">0 </span>:<span class="computerscore">0</span>
       </div>
     </section>
+    <section>
+      <div class="text">COMPUTER WİNS</div>
+    </section>
+    <section>
+      <div class="chooses">
+        <div class="userchoose">
+          <p>User</p>
+          <span id="userchoose"
+            ><img id="user_choose" src="img/hand.png" alt=""
+          /></span>
+        </div>
+        <div class="computerchoose">
+          <p>Computer</p>
+          <span id="computerchoose"
+            ><img id="computer_choose" src="img/hand.png" alt=""
+          /></span>
+        </div>
+      </div>
+    </section>
+    <script src="main.js"></script>
   </body>
 </html>
