@@ -6,12 +6,12 @@ const scissors = document.getElementById("s");
 const userChoose = document.getElementById("user_choose");
 const computerChoose = document.getElementById("computer_choose");
 const mesagge = document.getElementsByClassName("text")[0];
-
+const reset = document.getElementById("reset");
 let user = 0;
 let computer = 0;
 
 function computerSelection() {
-  const select = ["rock", "hand", "scissors"];
+  const select = ["rock", "paper", "scissors"];
   const rnmbr = Math.floor(Math.random() * 3);
   computerChoose.setAttribute("src", `img/${select[rnmbr]}.png`);
   return select[rnmbr];
@@ -28,7 +28,11 @@ function eventListeners() {
     result("scissors", cSelect);
   });
   paper.addEventListener("click", function () {
-    userChoose.setAttribute("src", `img/hand.png`);
+    userChoose.setAttribute(
+      "src",
+      `img/paper.png
+    `
+    );
     let cSelect = computerSelection();
     result("paper", cSelect);
   });
@@ -42,7 +46,7 @@ function result(user, computer) {
     case "paperrock":
       win();
       break;
-    case "scissorspaper":
+    case "scissorpaper":
       win();
       break;
     case "rockpaper":
@@ -67,6 +71,23 @@ function result(user, computer) {
 }
 function win() {
   user = user + 1;
-  mesagge.innerHTML = "YOU WİN";
+  mesagge.innerHTML = "YOU WIN";
   userScore.innerHTML = user.toString();
 }
+function lose() {
+  computer = computer + 1;
+  mesagge.innerHTML = "COMPUTER WINS";
+  computerScore.innerHTML = computer.toString();
+}
+function tie() {
+  mesagge.innerHTML = "TIE";
+}
+reset.addEventListener("click", function () {
+  userScore.innerHTML = "0";
+  computerScore.innerHTML = "0";
+  computerChoose.src = "img/ask.png";
+  userChoose.src = "img/ask.png";
+  mesagge.innerHTML = "CHOOSE ONE";
+  computer = 0;
+  user = 0;
+});
